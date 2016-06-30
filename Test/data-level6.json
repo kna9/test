@@ -1,0 +1,74 @@
+{
+  "documents": [
+    { "id": 1, "price": 69000, "service_fee": 10000, "payment_direction": "lawyer",  "promotion_code_enabled": true },
+    { "id": 2, "price": 79000, "service_fee": 25000, "payment_direction": "lawyer",  "promotion_code_enabled": true },
+    { "id": 3, "price": 30000, "service_fee": 30000, "payment_direction": "captain", "promotion_code_enabled": false }
+  ],
+  "products": [
+    { "id": 1, "price": 10000, "service_fee": 0, "payment_direction": "lawyer",      "promotion_code_enabled": true },
+    { "id": 2, "price": 30000, "service_fee": 30000, "payment_direction": "captain", "promotion_code_enabled": false}
+  ],
+  "services": [
+    { "id": 1, "name": "PERSONNALISATION DU CONTRAT", "price": 102, "service_fee": 50, "payment_direction": "captain" },
+    { "id": 2, "name": "ACCOMPAGNEMENT DANS LA REDACTION", "price": 102, "service_fee": 75, "payment_direction": "captain" },
+    { "id": 3, "name": "SUIVI DE PROCEDURES", "price": 102, "service_fee": 90, "payment_direction": "captain" },
+    { "id": 4, "name": "EXPERTISE ETAT DES LIEUX", "price": 102, "service_fee": 80, "payment_direction": "captain" }
+  ],
+  "lawyers": [
+    { "id": 1, "name": "Prénom1 Nom1" },
+    { "id": 2, "name": "Prénom2 Nom2" },
+    { "id": 3, "name": "Prénom2 Nom3" }
+  ],
+  "lawyer_services": [
+    { "id": 1, "lawyer_id": 1, "service_id": 1, "service_level": 1, "price":  15054, "service_fee": 300, "payment_direction": "lawyer" },
+    { "id": 2, "lawyer_id": 2, "service_id": 2, "service_level": 5, "price":  45054, "service_fee": 200, "payment_direction": "lawyer" },
+    { "id": 3, "lawyer_id": 3, "service_id": 3, "service_level": 3, "price":  54054, "service_fee": 150, "payment_direction": "lawyer" },
+    { "id": 4, "lawyer_id": 1, "service_id": 1, "service_level": 10, "price": 16554, "service_fee": 400, "payment_direction": "lawyer" },
+    { "id": 5, "lawyer_id": 2, "service_id": 2, "service_level": 8, "price":  45054, "service_fee": 100, "payment_direction": "lawyer" },
+    { "id": 6, "lawyer_id": 3, "service_id": 3, "service_level": 3, "price":  15994, "service_fee": 150, "payment_direction": "lawyer" },
+    { "id": 7, "lawyer_id": 1, "service_id": 4, "service_level": 6, "price":  98854, "service_fee": 200, "payment_direction": "lawyer" }
+  ],
+  "order_services": [
+    { "id": 1, "service_id": 2, "order_id": 7, "lawyer_id": 2 },
+    { "id": 2, "service_id": 1, "order_id": 8, "lawyer_id": null },
+    { "id": 3, "service_id": 2, "order_id": 9, "lawyer_id": 1 },
+    { "id": 4, "service_id": 1, "order_id": 10, "lawyer_id": null },
+    { "id": 5, "service_id": 2, "order_id": 11, "lawyer_id": 3 }
+  ],
+  "order_documents": [
+    { "id": 1, "document_id": 1, "order_id": 1 },
+    { "id": 2, "document_id": 1, "order_id": 3 },
+    { "id": 3, "document_id": 2, "order_id": 4 },
+    { "id": 4, "document_id": 3, "order_id": 6 }
+  ],
+  "order_products": [
+    { "id": 1, "product_id": 2, "order_id": 2 },
+    { "id": 2, "product_id": 1, "order_id": 3 },
+    { "id": 3, "product_id": 2, "order_id": 4 },
+    { "id": 4, "product_id": 1, "order_id": 5 },
+    { "id": 5, "product_id": 2, "order_id": 5 }
+  ],
+  "orders": [
+    { "id": 1, "promotion_id": null, "promotion_code": "C0D3-50-P0URC3NT5" }, // Order: document only
+    { "id": 2, "promotion_id": null, "promotion_code": "CODE ERRONE 00001" }, // Order: product only
+    { "id": 3, "promotion_id": null, "promotion_code": "SOLDES-2016-ETE16" }, // Order: document + product
+    { "id": 4, "promotion_id": null,    "promotion_code": "CODE ERRONE 00002" }, // Order: document + reduction + product
+    { "id": 5, "promotion_id": null, "promotion_code": "SOLDES-2016-ETE16" }, // Order: product + product captain
+    { "id": 6, "promotion_id": null, "promotion_code": "CODE-TEST-GRATUIT" },  // Order: document captain
+    { "id": 7, "promotion_id": 1, "promotion_code": null },                // Order: document captain
+    { "id": 8, "promotion_id": null, "promotion_code": null },                // Order: document captain 
+    { "id": 9, "promotion_id": null, "promotion_code": null },                // Order: document captain 
+    { "id": 10, "promotion_id": null, "promotion_code": null },                // Order: document captain 
+    { "id": 11, "promotion_id": null, "promotion_code": null },                // Order: document captain 
+    { "id": 12, "promotion_id": null, "promotion_code": null }                 // Order: document captain     
+  ],
+  "promotions": [
+    { "id": 1, "reduction": 10, "reduction_fixe":  0,   "promotion_code": null },
+    { "id": 1, "reduction": 10,  "reduction_fixe": 0,   "promotion_code": "S0LD3-2016-ETE10%" },
+    { "id": 1, "reduction": 0,   "reduction_fixe": 150, "promotion_code": "PARRA1NAGEW3B-150" },
+    { "id": 1, "reduction": 50,  "reduction_fixe": 0,   "promotion_code": "C0D3-50-P0URC3NT5" },
+    { "id": 1, "reduction": 100, "reduction_fixe": 0,   "promotion_code": "COD3-T3ST-GRATU1T" }
+  ]
+}
+
+
